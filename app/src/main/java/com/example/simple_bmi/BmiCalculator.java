@@ -37,11 +37,10 @@ public class BmiCalculator extends AppCompatActivity {
         tv_name.setText(name);
         tv_weight.setText(String.valueOf(weight));
         tv_height.setText(String.valueOf(height));
-        tv_imc.setText(decimalFormat.format(calculate(weight, height)));
+        tv_imc.setText("Your BMI is:\n"+ decimalFormat.format(calculate(weight, height)));
     }
 
     public double calculate(double weight, double height) {
         return weight / (height * height);
-
     }
 }
